@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    perspective: 1300px;
+}
+
+video {
+    object-fit:fill;
+    width: auto;
+    height: auto;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+.text-one {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+}
+
+.text-two {
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translateX(-50%);
+}
+
+.text-three {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+}
+
+.text-four {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%);
+}
+:root {
+    --margin-top:0;
+    --margin-left:0;
+    --animation-duration: 0s;
+    --animation-delay: 0s;
+}
+div {
+    transform-style: preserve-3d;
+}
+
+.bgm-controllor-div {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    clear: both;
+  }
+
+.btn-record {
+    position: absolute;
+    top: 12%;
+    right: 0;
+    clear: both;
+    background-color: transparent;
+    font-size: 26px;
+    border: none;
+}
+
+.video-download{
+    position: relative;
+    justify-content: center;
+    display: none;
+    margin: 0 auto;
+  }
+  
+
+.word-box,
+.word-box .word {
+    position: absolute;
+    animation: rotY 0s linear infinite;
+    animation-duration: var(--animation-duration);
+    animation-delay: var(--animation-delay);
+}
+.word-box {
+    margin-top: var(--margin-top);
+}
+.word-box .word {
+    margin-left: var(--margin-left);
+}
+.word-box .word {
+    animation-duration: reverse;
+}
+@keyframes rotY {
+    to {
+        transform: rotateY(360deg);
+    }
+}

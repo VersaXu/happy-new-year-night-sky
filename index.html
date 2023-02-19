@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The whole starry sky for My Princess</title>
+    <style>
+      #video_film {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        z-index: -1;
+      }
+      h1 {
+        font-size: 36px;
+        color: #c4ddff;
+        font-family: "楷体";
+      }
+      h2 {
+        font-size: 24px;
+        color: #c5cfdf;
+        font-family: "楷体";
+      }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="bgm-controllor-div">
+      <img
+        id="bgm_control"
+        onclick="play()"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAArZJREFUaEPtmetNHDEURj8qgFQQqACoIEkFpAOgAqACkgqSVJBQAaECoAKgAqACoAKiE40ly5qHr+0de1draX/t+MrH9/XZ3tCKjo0V5dIabNk8W9pjh5K2JV1Juq+5GSXBfko68WAA+9NBPs0NWRLsRdLWAMBfSfzw5OsckCXB3iMWDJQPGTEl7ZO5wfxVEp5AXiwiH2uC+ZDF83GRYN87TxxJOjAEVJF8XDTYtw6IovJV0qmk3UjIrHycC8xnoc/hRX4fIyHN+VgDzGfZ67yINzcjIV0+/hr7vjaYvzbgLPkI4P4QXEtgbo2WfASsV7q1CGbJxy+Sbvq81jqYv2bC9HcAsRJgnyVdr8EiS2zMZ6EIRnm4Bh0zf+qbtcfYoWUqHgv3GH0GvfcQHBqXMhTZLe4zUAfhKZnjP/n0GCRJ0zkGBL0DIOtoFgwo+gZCNWU0CwYUIZg6mgTrky9WwCbBKAQcCHNGc2Dk1F0OUTe3ObASYQhbc2Dou/PKHiMNuA+59daRrTxqgTkBEPZMbqt4F0DpXOYcW/p2JsWBg4fAwBg5jQhI6ZemgyaNmQeG3PEh4gECGPrl0GPG1BpMYBhD/xEaqYP7eIrQ2ACGtpIKhW0zGMkbiloL5I6kqTex3M1LAmNSatk/7jw+thG5G+dsmz3mJnLX/sPgqrOugk1NsdodspcMhkGqJOV27DGBfkOb6L3j61lViTBMDsVwPVQweoyv+AHh2cf6kM68T1Nujfg/y2MR9s2frCxYKXUzeBlV8pbK4jZCOpRHlvl8i8QaVCu1wFgYfS724a8PerSt1ARL7ZNAPk8dhGuCscCUsv/WVebRSlwbDJ1Ij4zVpUCRn5P9sjaYyx3CEsCxd2iENdV0SoP+t9kKmAN0AsBVOw6ZTgREATlDrYFZS/7g92uwYls5k6F/DSG9N6R+pJwAAAAASUVORK5CYII="
+      />
+    </div>
+    <audio id="bgm" src="video/若把你.mp3" autoplay loop></audio>
+    <video class="video-download" controls></video>
+    <button class="btn-record" title="Record">
+      <svg t="1672565965053" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2989" width="48" height="48"><path d="M928.064 285.525333c-6.570667-3.84-14.677333-3.861333-21.290667-0.085333L746.666667 376.661333c-1.216 0.682667-1.984 1.749333-3.008 2.602667-10.261333 1.536-18.261333 10.026667-18.261333 20.714667l0 349.930667c0 21.76-17.706667 39.466667-39.488 39.466667L167.466667 789.376c-21.76 0-39.466667-17.706667-39.466667-39.466667L128 316.8C128 295.04 145.706667 277.333333 167.466667 277.333333l526.954667 0c11.797333 0 21.333333-9.557333 21.333333-21.333333s-9.536-21.333333-21.333333-21.333333L167.466667 234.666667C122.176 234.666667 85.333333 271.509333 85.333333 316.8l0 433.130667c0 45.290667 36.842667 82.133333 82.133333 82.133333l518.464 0c45.290667 0 82.154667-36.842667 82.154667-82.133333l0-67.52 138.026667 85.653333c3.434667 2.154667 7.338667 3.2 11.242667 3.2 3.562667 0 7.146667-0.896 10.368-2.688C934.485333 764.8 938.666667 757.674667 938.666667 749.909333L938.666667 303.978667C938.666667 296.384 934.634667 289.344 928.064 285.525333zM896 711.552l-126.016-78.186667c-0.597333-0.384-1.301333-0.405333-1.92-0.704l0-219.093333L896 340.693333 896 711.552z" fill="#5D646F" p-id="2990"></path><path d="M215.296 363.733333m-42.666667 0a2 2 0 1 0 85.333333 0 2 2 0 1 0-85.333333 0Z" fill="#5D646F" p-id="2991"></path></svg>
+    </button>
+    <video id="video_film" poster="img/skystar2.jpg" autoplay muted loop>
+      <source src="video/skystar.mp4" type="video/mp4" />
+    </video>
+    <div class="text-one">
+      <h1>Made By</h1>
+    </div>
+    <div class="text-two">
+      <h1>WENQIAN XU</h1>
+    </div>
+    <div class="text-three btn-record">
+      <h1></h1>
+    </div>
+    <div class="text-four">
+      <h2></h2>
+    </div>
+
+    <div class="container"></div>
+    <script src="js/main.js"></script>
+    <script src="js/record.js"></script>
+  </body>
+</html>
