@@ -64,7 +64,6 @@ let words = [
   "君最长安福增禄",
   "迎春纳瑞柿登台",
   "好想回到那个夏天",
-  "偷偷表白一个叫申琪的女孩",
   "你是我人生中的一道彩虹",
   "岁岁平安",
   "年年有你",
@@ -112,6 +111,7 @@ let texttwo = document.querySelector(".text-two").querySelector("h1");
 let textthree = document.querySelector(".text-three").querySelector("h1");
 let textfour = document.querySelector(".text-four").querySelector("h2");
 
+// basic text style
 setTimeout(function () {
   textone.innerHTML = "今晚 整片星空为你一人闪烁✨";
   textone.style.color = "#E8F9FD";
@@ -124,6 +124,8 @@ setTimeout(function () {
   textfour.style.fontFamily = "STXinwei";
   texttwo.innerHTML = "";
 }, 5200);
+
+// underline text caption
 setTimeout(function () {
   textfour.innerHTML = "-当流星飞过天边 你会许下什么心愿-";
 }, 15200);
