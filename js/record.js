@@ -35,6 +35,5 @@ btn_record.addEventListener("click", async function() {
         a.download = 'video.webm'
         a.click()
     })
-    // 手动启动
     mediaRecorder.start()
 });
