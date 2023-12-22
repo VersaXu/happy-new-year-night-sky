@@ -5,7 +5,7 @@ btn_record.addEventListener("click", async function() {
         video: true
     })
 
-    // 以下我们选择更好的浏览器支持
+    // for better web browser support
     const mine = MediaRecorder.isTypeSupported("video/webm; codecs=vp9")
                     ? "video/webm; codecs=vp9"
                     : "video/webm"
@@ -13,13 +13,13 @@ btn_record.addEventListener("click", async function() {
         mimeType: mine
     })
 
-    //当我们的屏幕被录制下来的时候，浏览器会分给我们一个块(block),我们将其储存在变量中
+    //receive a chunck and store this when start recording
     let chunks = [];
     mediaRecorder.addEventListener('dataavailable', (e) => {
         chunks.push(e.data);
     })
 
-    // 当点击暂停按钮时，系统停止像chunks中传递块，则录制终止
+    // terminate delivering chunks when stop recording
     mediaRecorder.addEventListener('stop', () => {
         let blob = new Blob(chunks, {
             type: chunks[0].type
